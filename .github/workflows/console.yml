@@ -1,0 +1,16 @@
+name: Run Console Commands
+
+on: [push]
+
+jobs:
+  run-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run commands
+        run: |
+          echo "Running commands in GitHub Actions"
+          # Add your commands here
+          ls -la
+          python3 --version
